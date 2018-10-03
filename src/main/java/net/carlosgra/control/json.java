@@ -39,15 +39,18 @@ public class json extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet json para sesiones</h1>");
-            out.println("<h1><strong>INFORMACION</strong></h1>");
-            out.println("<h1>Servlet json para sesiones</h1>");
-            out.println("<h1>Servlet json para sesiones</h1>");
-            out.println("<h1>Servlet json para sesiones</h1>");
-            out.println("<h1>Servlet json para sesiones</h1>");
-            out.println("<h1>Servlet json para sesiones</h1>");
-            out.println("<h1>Servlet json para sesiones</h1>");
-            out.println("<h1>Servlet json para sesiones</h1>");
-            
+            out.println("<h1><strong>INFORMACIÓN</strong></h1>");
+            out.println("<h2> Protocolo -> "+request.getProtocol()+"</h2>");
+            out.println("<h2>Host petición -> "+request.getRemoteHost()+"</h2>");
+            out.println("<h2>Ip petición -> "+request.getRemoteAddr()+"</h2>");
+            out.println("<h2>Parametro usuario -> "+request.getParameter("usuario")+"</h2>");
+            out.println("<h2>Parametro password -> "+request.getParameter("password")+"</h2>");
+            out.println("<h2>Puerto de salida ->"+request.getRemotePort()+"</h2>");
+            out.println("<h2>Puerto de entrada -> "+request.getLocalPort()+"</h2>");
+            out.println("<h2>Ip local -> "+request.getLocalAddr()+"</h2>");
+            out.println("<h2>Nombre local -> "+request.getLocalName()+"</h2>");
+            out.println("<h2>Tipo autenticacion -> "+request.getAuthType()+"</h2>");
+            out.println("<h2>Cookies -> "+request.getCookies()+"</h2>");
             out.println("</body>");
             out.println("</html>");
         }

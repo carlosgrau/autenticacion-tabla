@@ -8,10 +8,10 @@
 
     </head>
     <body>
-        <form action="/json">
+        <form action="./json">
             <div class="container">
                 <br>
-            <button type="button" class="btn btn-danger" name="btnenviar" id="btnenviar">HAZ CLICK Y MIRA LO QUE PASA</button>  
+            <button type="submit" class="btn btn-danger" name="btnenviar" id="enviar">HAZ CLICK Y MIRA LO QUE PASA</button>  
             </div>
         </form>
         
@@ -19,13 +19,13 @@
     <script>
         $(document).ready(function () {
 
-            $("#btnenviar").click(function () {
-                var url = "/autentication/json?usuario=carlos&contrasenya=carlospass&operacion=GET";
+            $("#enviar").click(function () {
+                var url = "/autentication/json?usuario=carlos&contrasenya=carlospass";
                     $.ajax({
-                        //dataType: "json",
+                        dataType: "html",
                         url: url,
                         cache: false,
-                        //menthod: "GET",
+                        menthod: "GET",
                         success: function (data) {
                            
                         }
