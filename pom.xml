@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.carlosgrau</groupId>
-    <artifactId>autentication</artifactId>
+    <artifactId>autenticacion-tabla</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>autentication</name>
+    <name>autenticacion-tabla</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

@@ -11,7 +11,7 @@
         <form action="/autentication/json">
             <div class="container">
                 <br>
-            <button type="button" class="btn btn-danger" name="btnenviar" id="enviar">HAZ CLICK Y MIRA LO QUE PASA</button>  
+            <button type="submit" class="btn btn-danger" id="enviar">HAZ CLICK Y MIRA LO QUE PASA</button>  
             </div>
         </form>
         
@@ -22,13 +22,13 @@
             $("#enviar").click(function () {
                 //var url = "/autentication/json?usuario=carlos&contrasenya=carlospass";
                     $.ajax({
-                        dataType: "html",
+                        //dataType: "html",
                         url: "/autentication/json?usuario=carlos&contrasenya=carlospass",
                         cache: false,
-                        menthod: "GET",
-                        success: function (data) {
+                       // menthod: "GET",
+                        //success: function (data) {
                            
-                        }
+                       // }
                     });
                 
             });
