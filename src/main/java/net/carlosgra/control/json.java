@@ -58,10 +58,10 @@ public class json extends HttpServlet {
             out.println("<h2> Parametros recibidos </h2>");
             out.println("<table class=\"table table-bordered\">");
             Map parMap = request.getParameterMap();
-            for (Object key : parMap.keySet()) {
-                String clave = (String) key;
+            for (Object objeto : parMap.keySet()) {
+                String clave = (String) objeto;
                 String[] valor = (String[]) parMap.get(clave);
-                out.println("<tr><td>Parámetro: " + (String) key + "</td><td> valor: " + Arrays.toString(valor) + "</td></tr>");
+                out.println("<tr><td>Parámetro: " + (String) objeto + "</td><td> valor: " + Arrays.toString(valor) + "</td></tr>");
             }
             out.println("</table>");
             out.println("</body>");
