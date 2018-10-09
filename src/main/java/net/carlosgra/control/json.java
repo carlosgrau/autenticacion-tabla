@@ -7,6 +7,8 @@ package net.carlosgra.control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -52,6 +54,16 @@ public class json extends HttpServlet {
             out.println("<h2>Nombre local -> "+request.getLocalName()+"</h2>");
             out.println("<h2>Tipo autenticacion -> "+request.getAuthType()+"</h2>");
             out.println("<h2>Cookies -> "+request.getCookies()+"</h2>");
+            out.println("<br>");
+            out.println("<h2> Parametros recibidos </h2>");
+            out.println("<table class=\"table table-bordered\">");
+            Map parMap = request.getParameterMap();
+            for (Object key : parMap.keySet()) {
+                String clave = (String) key;
+                String[] valor = (String[]) parMap.get(clave);
+                out.println("<tr><td>Parámetro: " + (String) key + "</td><td> valor: " + Arrays.toString(valor) + "</td></tr>");
+            }
+            out.println("</table>");
             out.println("</body>");
             out.println("</html>");
         }
